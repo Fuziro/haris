@@ -1,9 +1,9 @@
 # Installasi
-
-apt install git
-apt install python 
-git clone https://github.com/Fuziro/test
+apt update && apt upgrade
+pkg update
+pkg install python2
+git clone <copy link>
 ls
-cd
-python -m pip install -r req.txt
-python nyepam.py
+cd gabus
+pip2 install requests
+python2 bantai.py
