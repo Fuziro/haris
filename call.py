@@ -11,17 +11,21 @@ def balik():
        sys.exit()
 def baner():
     print ('''
-\tALL SPAM OTP
+\t
+╔╗ ┬─┐┬ ┬┌┬┐┌─┐┬  ╔═╗┌─┐┌─┐┌┬┐┌┬┐┌─┐┬─┐
+╠╩╗├┬┘│ │ │ ├─┤│  ╚═╗├─┘├─┤││││││├┤ ├┬┘
+╚═╝┴└─└─┘ ┴ ┴ ┴┴─┘╚═╝┴  ┴ ┴┴ ┴┴ ┴└─┘┴└─
+
 \t------------
-\nCreator:Avindeso 
-Youtube: No Comment
-Github : github.com/Fuziro
+\nCreator: Programmer nDeso
+Hacked: Avindeso Sidomakmur
+Lisensi: haris@programming_indonesia
 ==========================================''')
 def kata(s):
     for c in s + "\n":
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(1./5)
+        time.sleep(1./100)
 
 def jenius():
     ua={
@@ -245,10 +249,27 @@ if __name__=="__main__":
           clear()
           baner()
           hh="+62"
-          no=input("[+]Phone Number: ")
-          c=no[1:12]
+          no=input("[+]Korban: ")
+          c=no[1:1000]
           w=hh+c 
-          kata("Waiting....!!")
+          kata("Tunggu....!!")
+          jenius()
+          oyo()
+          mapclub()
+          call()
+          time.sleep(1)
+          soplai()
+          depop()
+          rupa()
+          matahari()
+          socil()
+          indo()
+          olx()
+          call2()
+          time.sleep(1)
+          alodoc()
+          klik()
+          wa2()
           jenius()
           oyo()
           mapclub()
@@ -267,14 +288,12 @@ if __name__=="__main__":
           klik()
           wa2()
           time.sleep(1)
-          kata("[•]Done..")
+          kata("[•]Siap bosQ")
           balik()
      except KeyError:
              sys.exit()
      except KeyboardInterrupt:
              sys.exit()
-     except requests.exceptions.ConnectionError:
-             sys.exit('connection error!')
      except TypeError:
              balik()
      except ValueError:
