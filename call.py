@@ -19,7 +19,7 @@ def baner():
 \t------------
 \nCreator: Programmer nDeso
 Hacked: Avindeso Sidomakmur
-Lisensi: haris@programming_indonesia
+Lisensi: Muhammad Haris
 ==========================================''')
 def kata(s):
     for c in s + "\n":
